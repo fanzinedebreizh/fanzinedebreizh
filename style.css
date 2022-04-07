@@ -1,0 +1,916 @@
+@charset "UTF-8";
+/*------------------------------------------------------------*/
+/*  Antoine Baptista - 2021-2022 premier code en HTML et CSS  */
+/*------------------------------------------------------------*/
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Source Serif Pro', serif; */
+/* font-family: 'Bebas Neue', cursive; */
+/* font-family: 'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif; */
+/* définition des variables sass */
+/* Les couleurs */
+/* La gestion des différentes polices */
+/* la typographie */
+/*  */
+* {
+  /* on enlève toutes les margin et les padding*/
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* déclaration du flex 
+    largeur du header et repositionnement de celui-ci
+    par rapport au reste du contenu --> par défaut le
+    z-index est à 0 -- mettre un élément avec un valeur
+    plus importante le met au prmier plan par rapport
+    aux autres */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0px 0px 0px;
+  padding: 0px 0px 8px 0px;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+
+header div {
+  /*Nom du blog enfant du header 
+    on indique la largeur, la hauteur les padding 
+    on dimensionne le flex ainsi que la police sa
+    couleur et la couleur d'arrière plan */
+  font-family: "Pacifico", cursive;
+  font-size: 15px;
+  color: #0d2859;
+}
+
+header a {
+  /* on règle les padding (marges intérieures de l'élement {a} */
+  padding: 2px 0px 0px 14px;
+}
+
+h1 {
+  /* on règle la marge extérieure haut de l'élément {h1} */
+  margin-top: 5px;
+}
+
+header img {
+  /* on règle les marges intérieures du logo dans le header */
+  padding: 11px 10px 0px 0px;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#bodyindex {
+  /* on affecte à l'élément 'body' une image de fond */
+  background-image: url("loc-amand.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#bodya-propos, #bodyabout-me, #bodyconnexion, #bodycontact,
+#bodycopyright, #bodymenu, #bodyrechercher {
+  /* on affecte à l'élément 'body' une image de fond */
+  background-image: url("sable.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: right; */
+  background-position: bottom;
+  /* align-items:flex-start; */
+}
+
+.info-construction {
+  /* fixe le paragraphe en lui donnant
+    le style recherché */
+  font-family: "Source Serif Pro", serif;
+  font-size: 35px;
+  color: #0d2859;
+  text-shadow: 1px 3px 1px #3da6c1;
+  text-align: center;
+  width: 80%;
+}
+
+.info-construction-admin {
+  /* fixe le paragraphe en lui donnant
+    le style recherché */
+  font-family: "Source Serif Pro", serif;
+  font-size: 35px;
+  color: #d50050;
+  text-shadow: 1px 3px 1px #3da6c1;
+  text-align: center;
+  width: 80%;
+}
+
+main {
+  /* déclaration des variables pour toutes les sections 'main'*/
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#maina-propos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh-90px);
+}
+
+main p {
+  /* fixe le paragraphe en lui donnant
+    le style recherché */
+  font-family: "Bebas Neue", cursive;
+  font-size: 45px;
+  text-shadow: 1px 3px 1px #0d2859;
+  color: #3da6c1;
+  text-align: center;
+  width: 100%;
+  /* margin-left: 10vw; */
+}
+
+main img {
+  /* positionnement du triangle toujours en bas de page et à droite
+    le z-index est modifié afin qu'il se positionne au dessus du footer */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+aside {
+  /* les boutons de navigation sont cachés
+    et on leur donne une largeur de 0%
+    pas vu ... pas pris */
+  visibility: hidden;
+  width: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.nav-mobile {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  /* on donne un positionnement à tous les 'h2' */
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: "Source Serif Pro", serif;
+  font-size: 24px;
+  text-shadow: 1px 3px 1px #3da6c1;
+  color: #0d2859;
+}
+
+#sectionabout-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*flex-direction: column;
+    align-content: center;*/
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#prez-blog, #prez-about {
+  /* on donne un positionnement à tous les 'h2' */
+  width: 100%;
+  /* height: calc(100%-90px); */
+  margin-top: 30px;
+  margin-left: 20px;
+  max-height: 1.6em;
+  font-family: "Source Serif Pro", serif;
+  font-size: 24px;
+  text-shadow: 1px 3px 1px #3da6c1;
+  color: #0d2859;
+}
+
+#babou {
+  /* on donne un positionnement à tous les 'h2' */
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 10px;
+  max-height: 1.6em;
+  font-family: "Source Serif Pro", serif;
+  font-size: 24px;
+  text-shadow: 1px 3px 1px #3da6c1;
+  color: #0d2859;
+}
+
+#prez-texte {
+  margin-top: 20px;
+  height: 100%;
+  max-height: 400px;
+  width: 95%;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+
+#prez-me {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 100%;
+  max-height: 360px;
+  width: 95%;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+
+#prez-texte p, #prez-me p {
+  /*  */
+  margin: 0px 0px 20px 0px;
+}
+
+.iframe_container iframe {
+  width: 400px;
+  height: 234px;
+}
+
+#boutons-mobile {
+  /* on affiche les boutons de navigation de la 
+    page 'menu' => uniquement disponible sur les mobiles
+    en colonne */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 18px;
+  height: calc(100%-90px);
+  width: 100%;
+}
+
+#boutons-mobile a {
+  /*  */
+  background: #3da6c1;
+  background-image: -o-linear-gradient(top, #3da6c1, #3da6c1);
+  background-image: -webkit-gradient(to bottom, #3da6c1, #3da6c1);
+  border-radius: 7px;
+  width: 250px;
+  color: white;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 15px 15px 15px 15px;
+  -webkit-box-shadow: 1px 1px 20px 0 black;
+  box-shadow: 1px 1px 20px 0 black;
+  text-shadow: 1px 1px 20px black;
+  border: solid #3da6c1 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+#boutons-mobile a:hover {
+  /*  */
+  border: solid #3da6c1 1px;
+  background: #bac700;
+  background-image: -o-linear-gradient(top, #bac700, #bac700);
+  background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+#boutons-mobile #bouton-admin {
+  /*  */
+  background: #bac700;
+  background-image: -o-linear-gradient(top, #bac700, #bac700);
+  background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+  border-radius: 7px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  margin-top: 70px;
+  -webkit-box-shadow: 1px 1px 20px 0 black;
+  box-shadow: 1px 1px 20px 0 black;
+  text-shadow: 1px 1px 20px black;
+  border: solid #3da6c1 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+#boutons-mobile #bouton-admin:hover {
+  /*  */
+  border: solid #bac700 1px;
+  background: #d50050;
+  background-image: -o-linear-gradient(top, #d50050, #d50050);
+  background-image: -webkit-gradient(to bottom, #d50050, #d50050);
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+#tous-les-reseaux {
+  /* positionnement des icones d'accès aux réseaux
+    sociaux .. on met le z-index à 2 car l'habillage 'triangle'
+    possède déjà le z-index 1 */
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 25px;
+  z-index: 2;
+}
+
+#tous-les-reseaux a:nth-child(1) {
+  /* on affecte un padding gauche sur le premier icone des réseaux
+    afin de ne pas chevaucher le triangle*/
+  padding-left: 75px;
+}
+
+#tous-les-reseaux a:nth-child(5) {
+  /* on affecte un padding droit sur le premier icone des réseaux
+    afin de ne pas chevaucher le triangle*/
+  padding-right: 75px;
+}
+
+footer {
+  /* on positionne le footer toujours en bas de page */
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.63);
+  position: fixed;
+  height: 1.9em;
+  bottom: 0;
+}
+
+footer span {
+  /* mise en forme su texte dont la balise est <span> */
+  font-family: "Pacifico", cursive;
+  font-size: 10px;
+  color: #0d2859;
+}
+
+.iframe_container {
+  width: 80%;
+  position: relative;
+}
+
+.iframe_container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: calc(234/416*100%);
+}
+
+iframe {
+  position: absolute;
+  /* width: 200%;
+    height: 200%;*/
+  margin-top: 20px;
+  margin-left: 18px;
+}
+
+/* premier point de rupture //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Sur uniquement les écrans, quand la largeur de la fenêtre
+fait au minimum 700px et au maximum 1249px */
+@media screen and (min-width: 700px) and (max-width: 913px) {
+  /* les hamburgers ne s'affichent plus*/
+  #mcdo {
+    visibility: hidden;
+  }
+  header div {
+    /*Nom du blog enfant du header 
+        on indique la largeur, la hauteur les padding 
+        on dimensionne le flex ainsi que la police sa
+        couleur et la couleur d'arrière plan */
+    font-family: "Pacifico", cursive;
+    font-size: 18px;
+    color: #0d2859;
+  }
+  header img {
+    /* on règle les marges intérieures du logo dans le header */
+    padding: 15px 10px 0px 0px;
+    width: 45px;
+    height: 45px;
+  }
+  main p {
+    /* fixe le paragraphe en lui donnant
+        le style recherché */
+    font-family: "Bebas Neue", cursive;
+    font-size: 45px;
+    text-shadow: 1px 3px 1px #0d2859;
+    color: #3da6c1;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px 50px 135px;
+  }
+  aside {
+    /* les boutons de navigation sont cachés
+        et on leur donne une largeur de 0%
+        pas vu ... pas pris */
+    visibility: visible;
+    width: 200px;
+    height: 100%;
+    margin-top: 172px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  aside a {
+    background: #3da6c1;
+    background-image: -o-linear-gradient(top, #3da6c1, #3da6c1);
+    background-image: -webkit-gradient(to bottom, #3da6c1, #3da6c1);
+    border-radius: 7px;
+    width: 150px;
+    color: white;
+    text-decoration: none;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px 50px 15px 15px;
+    -webkit-box-shadow: 1px 1px 20px 0 black;
+    box-shadow: 1px 1px 20px 0 black;
+    text-shadow: 1px 1px 20px black;
+    border: solid #3da6c1 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+  aside a:hover {
+    border: solid #3da6c1 1px;
+    background: #bac700;
+    background-image: -o-linear-gradient(top, #bac700, #bac700);
+    background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+    border-radius: 7px;
+    text-decoration: none;
+  }
+  #bouton-admin {
+    background: #bac700;
+    background-image: -o-linear-gradient(top, #bac700, #bac700);
+    background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+    border-radius: 7px;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 129px;
+    -webkit-box-shadow: 1px 1px 20px 0 black;
+    box-shadow: 1px 1px 20px 0 black;
+    text-shadow: 1px 1px 20px black;
+    border: solid #3da6c1 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+  #bouton-admin:hover {
+    border: solid #bac700 1px;
+    background: #d50050;
+    background-image: -o-linear-gradient(top, #d50050, #d50050);
+    background-image: -webkit-gradient(to bottom, #d50050, #d50050);
+    border-radius: 7px;
+    text-decoration: none;
+  }
+  #prez-me {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 100%;
+    max-height: 500px;
+    width: 33.33%;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.63);
+  }
+  #babou {
+    /* on donne un positionnement à tous les 'h2' */
+    width: 100%;
+    margin-left: 20px;
+    margin-top: -29px;
+    max-height: 1.6em;
+    font-family: "Source Serif Pro", serif;
+    font-size: 24px;
+    text-shadow: 1px 3px 1px #3da6c1;
+    color: #0d2859;
+  }
+  .iframe_container iframe {
+    width: 60vw;
+    height: calc(60vw/1.77);
+  }
+  .iframe_container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: calc(234/416*100%);
+  }
+  iframe {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 18px;
+  }
+  #tous-les-reseaux img {
+    /* dimension des images pour les réseaux sociaux */
+    width: 40px;
+    height: 40px;
+  }
+  #tous-les-reseaux {
+    /* positionnement des icones d'accès aux réseaux
+        sociaux .. on met les relève un petit peu */
+    margin-bottom: 30px;
+  }
+  footer {
+    /* on positionne le footer toujours en bas de page */
+    font-size: 13px;
+    width: 100%;
+    height: 1.9em;
+  }
+  footer span {
+    /* mise en forme su texte dont la balise est <span> */
+    font-size: 13px;
+  }
+}
+
+/* second point de rupture //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Sur uniquement les écrans, quand la largeur de la fenêtre
+fait au minimum 700px et au maximum 1249px */
+@media screen and (min-width: 914px) and (max-width: 1249px) {
+  /* les hamburgers ne s'affichent plus*/
+  #mcdo {
+    visibility: hidden;
+  }
+  header div {
+    /*Nom du blog enfant du header 
+        on indique la largeur, la hauteur les padding 
+        on dimensionne le flex ainsi que la police sa
+        couleur et la couleur d'arrière plan */
+    font-family: "Pacifico", cursive;
+    font-size: 18px;
+    color: #0d2859;
+  }
+  header img {
+    /* on règle les marges intérieures du logo dans le header */
+    padding: 15px 10px 0px 0px;
+    width: 45px;
+    height: 45px;
+  }
+  main p {
+    /* fixe le paragraphe en lui donnant
+        le style recherché */
+    font-family: "Bebas Neue", cursive;
+    font-size: 64px;
+    text-shadow: 1px 3px 1px #0d2859;
+    color: #3da6c1;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px 50px 135px;
+  }
+  aside {
+    /* les boutons de navigation sont cachés
+        et on leur donne une largeur de 0%
+        pas vu ... pas pris */
+    visibility: visible;
+    width: 200px;
+    height: 100%;
+    margin-top: 172px;
+    padding-right: 20px;
+    text-align: center;
+  }
+  aside a {
+    background: #3da6c1;
+    background-image: -o-linear-gradient(top, #3da6c1, #3da6c1);
+    background-image: -webkit-gradient(to bottom, #3da6c1, #3da6c1);
+    border-radius: 7px;
+    width: 150px;
+    color: white;
+    text-decoration: none;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px 50px 15px 15px;
+    -webkit-box-shadow: 1px 1px 20px 0 black;
+    box-shadow: 1px 1px 20px 0 black;
+    text-shadow: 1px 1px 20px black;
+    border: solid #3da6c1 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+  aside a:hover {
+    border: solid #3da6c1 1px;
+    background: #bac700;
+    background-image: -o-linear-gradient(top, #bac700, #bac700);
+    background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+    border-radius: 7px;
+    text-decoration: none;
+  }
+  #bouton-admin {
+    background: #bac700;
+    background-image: -o-linear-gradient(top, #bac700, #bac700);
+    background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+    border-radius: 7px;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 129px;
+    -webkit-box-shadow: 1px 1px 20px 0 black;
+    box-shadow: 1px 1px 20px 0 black;
+    text-shadow: 1px 1px 20px black;
+    border: solid #3da6c1 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+  #bouton-admin:hover {
+    border: solid #bac700 1px;
+    background: #d50050;
+    background-image: -o-linear-gradient(top, #d50050, #d50050);
+    background-image: -webkit-gradient(to bottom, #d50050, #d50050);
+    border-radius: 7px;
+    text-decoration: none;
+  }
+  #prez-me {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 100%;
+    max-height: 500px;
+    width: 33.33%;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.63);
+  }
+  #babou {
+    /* on donne un positionnement à tous les 'h2' */
+    width: 100%;
+    margin-left: 20px;
+    margin-top: -29px;
+    max-height: 1.6em;
+    font-family: "Source Serif Pro", serif;
+    font-size: 24px;
+    text-shadow: 1px 3px 1px #3da6c1;
+    color: #0d2859;
+  }
+  .iframe_container iframe {
+    width: 60vw;
+    height: calc(60vw/1.77);
+  }
+  .iframe_container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: calc(234/416*100%);
+  }
+  iframe {
+    position: absolute;
+    /* width: 200%;
+        height: 200%;*/
+    margin-top: 20px;
+    margin-left: 18px;
+  }
+  #tous-les-reseaux img {
+    /* dimension des images pour les réseaux sociaux */
+    width: 40px;
+    height: 40px;
+  }
+  #tous-les-reseaux {
+    /* positionnement des icones d'accès aux réseaux
+        sociaux .. on met les relève un petit peu */
+    margin-bottom: 30px;
+  }
+  footer {
+    /* on positionne le footer toujours en bas de page */
+    font-size: 13px;
+    width: 100%;
+    height: 1.9em;
+  }
+  footer span {
+    /* mise en forme su texte dont la balise est <span> */
+    font-size: 13px;
+  }
+}
+
+/* troisième  point de rupture //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Sur uniquement les écrans, quand la largeur de la fenêtre
+fait au minimum 1250px */
+@media screen and (min-width: 1250px) {
+  /* les hamburgers ne s'affichent plus*/
+  #mcdo {
+    visibility: hidden;
+  }
+  header div {
+    /*Nom du blog enfant du header 
+        on indique la largeur, la hauteur les padding 
+        on dimensionne le flex ainsi que la police sa
+        couleur et la couleur d'arrière plan */
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+    color: #0d2859;
+  }
+  header img {
+    /* on règle les marges intérieures du logo dans le header */
+    padding: 15px 10px 0px 0px;
+    width: 50px;
+    height: 50px;
+  }
+  main p {
+    /* fixe le paragraphe en lui donnant
+        le style recherché */
+    font-family: "Bebas Neue", cursive;
+    font-size: 72px;
+    text-shadow: 1px 3px 1px #0d2859;
+    color: #3da6c1;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px 50px 135px;
+  }
+  aside {
+    /* les boutons de navigation sont cachés
+        et on leur donne une largeur de 0%
+        pas vu ... pas pris */
+    visibility: visible;
+    width: 200px;
+    height: 100%;
+    margin-top: 200px;
+    padding-right: 75px;
+    text-align: center;
+  }
+  aside a {
+    background: #3da6c1;
+    background-image: -o-linear-gradient(top, #3da6c1, #3da6c1);
+    background-image: -webkit-gradient(to bottom, #3da6c1, #3da6c1);
+    border-radius: 7px;
+    width: 200px;
+    color: white;
+    text-decoration: none;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px 50px 29px 15px;
+    -webkit-box-shadow: 1px 1px 20px 0 black;
+    box-shadow: 1px 1px 20px 0 black;
+    text-shadow: 1px 1px 20px black;
+    border: solid #3da6c1 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+  aside a:hover {
+    border: solid #3da6c1 1px;
+    background: #bac700;
+    background-image: -o-linear-gradient(top, #bac700, #bac700);
+    background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+    border-radius: 7px;
+    text-decoration: none;
+  }
+  #bouton-admin {
+    background: #bac700;
+    background-image: -o-linear-gradient(top, #bac700, #bac700);
+    background-image: -webkit-gradient(to bottom, #bac700, #bac700);
+    border-radius: 7px;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 130px;
+    -webkit-box-shadow: 1px 1px 20px 0 black;
+    box-shadow: 1px 1px 20px 0 black;
+    text-shadow: 1px 1px 20px black;
+    border: solid #3da6c1 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+  #bouton-admin:hover {
+    border: solid #bac700 1px;
+    background: #d50050;
+    background-image: -o-linear-gradient(top, #d50050, #d50050);
+    background-image: -webkit-gradient(to bottom, #d50050, #d50050);
+    border-radius: 7px;
+    text-decoration: none;
+  }
+  #prez-me {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 100%;
+    max-height: 500px;
+    width: 33.33%;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.63);
+  }
+  #babou {
+    /* on donne un positionnement à tous les 'h2' */
+    width: 100%;
+    margin-left: 20px;
+    margin-top: -29px;
+    max-height: 1.6em;
+    font-family: "Source Serif Pro", serif;
+    font-size: 24px;
+    text-shadow: 1px 3px 1px #3da6c1;
+    color: #0d2859;
+  }
+  .iframe_container iframe {
+    width: 60vw;
+    height: calc(60vw/1.77);
+    max-width: 900px;
+    max-height: 500px;
+  }
+  .iframe_container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: calc(234/416*100%);
+  }
+  iframe {
+    position: absolute;
+    /* width: 200%;
+        height: 200%;*/
+    margin-top: 20px;
+    margin-left: 18px;
+  }
+  #tous-les-reseaux img {
+    /* dimension des images pour les réseaux sociaux */
+    width: 50px;
+    height: 50px;
+  }
+  #tous-les-reseaux {
+    /* positionnement des icones d'accès aux réseaux
+        sociaux .. on met les relève un petit peu */
+    margin-bottom: 35px;
+  }
+  footer {
+    /* on positionne le footer toujours en bas de page */
+    font-size: 16px;
+    width: 100%;
+    height: 1.9em;
+  }
+  footer span {
+    /* mise en forme su texte dont la balise est <span> */
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
